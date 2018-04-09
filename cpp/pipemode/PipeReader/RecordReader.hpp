@@ -15,13 +15,13 @@ class RecordReader {
 
 public:
 
-	/**
-	   Constructs a new RecordReader.
+    /**
+       Constructs a new RecordReader.
 
-	   Records are read from the specified PipeReader reader. Each call to read on reader reads
-	   read_size bytes. The RecordReader buffers up to buffer_capacity bytes from the underlying 
-	   PipeReader
-	*/
+       Records are read from the specified PipeReader reader. Each call to read on reader reads
+       read_size bytes. The RecordReader buffers up to buffer_capacity bytes from the underlying 
+       PipeReader
+    */
     RecordReader(PipeReader& reader, const std::size_t read_size, const std::size_t buffer_capacity);
     
     /**
@@ -35,13 +35,13 @@ public:
 
 protected:
 
-	/**
-	   Reads up-to desired size bytes from this RecordReader's PipeReader. Returns the
-	   number of bytes read.
+    /**
+       Reads up-to desired size bytes from this RecordReader's PipeReader. Returns the
+       number of bytes read.
 
        param[in] desired_size The number of bytes to read.
        return The number of bytes actually read.
-	*/
+    */
     std::size_t FillBuffer(std::size_t desired_size);
 
     /**
